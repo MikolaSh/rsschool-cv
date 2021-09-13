@@ -18,3 +18,17 @@ ___________________________
 - html
 - CSS
 - Git
+______________________________
+### Exaples of code
+"Hello, world!" on C++
+`#include <iostream>`
+`using namespace std;`
+
+`main(){`
+`cout«"Hello, world!"«endl;`
+`}`
+______________________________
+### Languages
+- Russian (native)
+- Belarusian (native)
+- A2 (Pre-Intermediate)
