@@ -7,12 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="menu">
-
-    </nav>
     <header class="header">
         <h1>Nikolai Shulga</h1>
     </header>
+    <main>
+    <nav class="menu">
+
+    </nav>
     <section>
         <h2 class="aboutMyself">About Myself</h2>
         <article>
@@ -31,7 +32,7 @@
         </article>
     </section>
     <section>
-        <h2 class="skilss">
+        <h2 class="skilss">Skills</h2>
             <div class="skilssDiv">
                 <ul>
                     <li>C++</li>
@@ -41,10 +42,81 @@
                     <li>Git</li>
                 </ul>
             </div>
-        </h2>
     </section>
-    <section></section>
-    <section></section>
+    <section class="code">
+        <h2>Code Exaples</h2>
+        <pre>
+            #include&lt;iostream&gt;
+            #include&lt;fstream&gt;
+            #include&lt;ctime&gt;
+            #include&lt;vector&gt;
+            #include&lt;algorithm&gt;
+            
+            using namespace std;
+            
+            void out(vector&lt;int&gt;& a) {
+                for (int i = 0; i &lt; a.size(); i++) {
+                    cout &lt;&lt; a[i] &lt;&lt; '\t';
+                }
+            }
+            int fillfile(ofstream& f) {
+                srand(time(NULL));
+                int c = rand() % 20;
+                for (int i = 0; i &lt; c; i++) {
+                    f &lt;&lt; rand() % 10 &lt;&lt; ' ';
+                }
+                return c;
+            }
+            void read(ifstream& g, vector&lt;int&gt;& a) {
+                for (int i = 0; i &lt; a.size(); i++) {
+                    g &gt;&gt; a[i];
+                }
+            }
+            void del(vector&lt;int&gt;& a) {
+                cout &lt;&lt; endl;
+                for (int i = 0; i &lt; a.size(); i++) {
+                    if (a.size() == i + 1) break;
+                    if (a[i] == a[i+1] ) {
+                        a.erase(a.begin()+i);
+                        i--;
+                    }
+                }	
+            }
+            int main() {
+                ofstream f;
+                f.open("chisla.txt");
+                vector&lt;int&gt; a(fillfile(f));
+                f.close();
+                ifstream g;
+                g.open("chisla.txt");
+                read(g, a);
+                g.close();
+                out(a);
+                cout &lt;&lt; "\n\n";
+                sort(a.begin(), a.end());
+                del(a);
+                out(a);
+            }
+        </pre>
+    </section>
+    <section class="projects">
+        <h2>My projects</h2>
+    </section>
+    <section>
+        <h2>Languages</h2>
+        <ul>
+            <li>Russian<i>(native)</i></li>
+            <li>Belarus<i>(native)</i></li>
+            <li>English<i>(A2+)</i></li>
+        </ul>
+    </section>
+    <section>
+        <h2 class="video">Video</h2>
+        <div class="video-container">
+
+        </div>
+    </section>
+</main>
     <footer>
         <div class="contacts">
             <ul>
