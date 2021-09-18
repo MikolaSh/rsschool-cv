@@ -1,0 +1,27 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  h1 {
+    text-transform:uppercase;
+  }
+.header{
+    border: 3px solid red;
+    background-color: rgb(12, 55, 134);
+}
+  .section{
+    border: 3px solid red;
+    display: flex;
+    text-align: center;
+
+}
+div{
+    border: 3px solid red;
+}
+.main{
+    border: 3px solid red;
+    margin-left: 30%;
+    margin-right: 30%;
+}
