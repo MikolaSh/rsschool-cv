@@ -9,6 +9,7 @@
     /*display: flex;*/
 }
 .Contacts {
+  flex-wrap: wrap;
   display: flex;
   list-style: none;
   text-align:justify;
@@ -18,18 +19,18 @@
     list-style: none;
     margin: 50px 0 50px;
     padding: 25px 0px 25px;
-    text-align: center;
+    /*text-align: center;*/
     background-color: rgb(255, 255, 255);
     bottom: 50%;
     padding: 20px;
   }
 .Contacts a {
-    text-align: center;
+  text-align: center;
   text-decoration: none;
   font-family: 'PT Sans Caption', sans-serif;
   letter-spacing: 10px;
   padding-bottom: 20px;
-  margin: 30px 30px;
+  margin: 3px 3px;
   font-size: 20px;
   text-transform: uppercase;
   color:#929292;
@@ -55,22 +56,27 @@
 /*___________________________*/
 .cards{
   display: flex;
-  /*flex-wrap: wrap;*/
+  flex-wrap: wrap;
   justify-content: space-evenly;
 }
 .card{
- /* flex-wrap: wrap;*/
+  text-transform: uppercase;
  position: relative;
 margin: 10px ;
 padding: 10px;
 font-family: 'Roboto', sans-serif;
 display: block;
 text-decoration: none;
-color: #3e5a4a;
-border: 3px solid #3e5a4a;
+color: #929292;
+border: 3px solid #929292;
 border-radius: 1%;
 }
 
+.cards a:hover{
+  transition: 0.5s;
+  color: #3e5a4a;
+  border: 3px solid #3e5a4a;
+}
 /*----------------------*/
 .projects-container{
   display: flex;
@@ -106,7 +112,7 @@ h2{
 }
 h3{
     
-  color: #3e5a4a;
+  color: #929292;
     font-family: 'PT Sans Caption', sans-serif;
     list-style: none;
     margin:  5px;
@@ -115,6 +121,11 @@ h3{
     letter-spacing: 10px;
     font-size: 20px;
     text-transform: uppercase;
+}
+h3:hover{
+  transition: 0.5s;
+
+  color: #3e5a4a;
 }
 p{
     text-align: justify;
@@ -126,6 +137,7 @@ p{
 }
 .skills{
   display: flex;
+
     justify-content: space-around;
 }
 .skills li{
