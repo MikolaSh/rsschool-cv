@@ -137,7 +137,7 @@ p{
 }
 .skills{
   display: flex;
-
+  flex-wrap: wrap;
     justify-content: space-around;
 }
 .skills li{
