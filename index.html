@@ -1,135 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>MikolaSh.CV</title>
+    <base target="_blank">
 </head>
 <body>
-    <header class="header">
-        <h1>Nikolai Shulga</h1>
-        <img src="/assets/images/05050dde-8599-4195-b2cc-99dcac0d203d.jpg" alt="ME!!!">
-    </header>
-    <main class="main">
-    <nav class="menu">
-
-    </nav>
-    <section>
-        <h2 class="aboutMyself">About Myself</h2>
-        <article>
-            <p>Hello, my name is Nikolai, I'm 20 years old, live in Minsk, Belarus and I'm studying front-end in RSschool!
-                I'm student on Faculty of Radiophysics and Computer technologies BSU. This summer I have ended my first year. 
-                I know C++ on a low level and have studied html in middle school. I'm strong, fast and handsome person. I'm a little bit shy, polite, modest. Have a hith level soft skills. 
-                I want to becom a JS developer to get a lot of money and go to the trip through the Europe on my own car.</p>
+    <div class="section">
+        
+    <main class='main'>
+        <header class="header">
+        <h1>Micolaus Curriculum Vitae</h1>
+        <img src="https://user-images.githubusercontent.com/86345167/126896239-981e0347-66d3-43df-aeb5-1abfba9e80f2.jpg" alt="This is me" width="200" class="round">
+        <p><i>"End? No, the journey doesn't end here. Death is just another path, one that we all must take."</i><br><br>
+            &mdash; J.R.R. Tolkien, The Lord of the Rings</p>
+        </header>
+        <article class="block">
+           <h2 class="title">About myself</h2>
+           <p>Hello, my name is Nikolai, I'm 20 years old, live in Minsk, Belarus and I'm studying front-end in RSschool! <br> 
+            I'm student on Faculty of Radiophysics and Computer technologies BSU. This summer I have ended my first year. 
+            I know C++ on a low level and have studied html in middle school. I'm strong, fast and handsome person.
+            I'm a little bit shy, polite, modest. Have a hith level soft skills. 
+            I want to becom a JS developer to get a lot of money and go to the trip through the Europe on my own car.
+            </p>
         </article>
-    </section>
-    <section>
-        <h2 class="education">Education</h2>
-        <article class="educationArticle">
-            <p>In 2018 I have graduated from high school №115 in Minsk. In this school I have studying music, but my school did not give a diploma of musical education and for this reason I graduated from a music school as an external student. 
-                After scool I entered the Faculty of Philology of BSU and next two years I had been studying bulgarian language. In 2020, when the pandemy of covid-19 started, I decided, that philology doesn't attract me anymore and I need to reentered another faculty. 
-                Scince autumn 2020 I'm the student of Faculty of Radiophysics and Computer technologies of BSU and now I ended first year. This summer I started stage0 front-end cours from RS-school and now I'm on the stage1.</p>
+        <article class="block">
+            <h2 class="title">Education</h2>
+            <p>In 2018 I have graduated from high school №115 in Minsk. 
+                In this school I have studying music, but my school did not give a diploma of musical education
+                and for this reason I graduated from a music school as an external student.
+                After scool I entered the Faculty of Philology of BSU and next two years I had been studying bulgarian language.
+                In 2020, when the pandemy of covid-19 started, I decided, that philology doesn't attract me anymore and I need to reentered another faculty.
+                Scince autumn 2020 I'm the student of Faculty of Radiophysics and Computer technologies of BSU and now I ended first year. 
+                This summer I started front-end cours from RS-school.  
+            </p>
         </article>
-    </section>
-    <section>
-        <h2 class="skilss">Skills</h2>
-            <div class="skilssDiv">
-                <ul>
-                    <li>C++</li>
-                    <li>JavaScript</li>
-                    <li>HTML5</li>
-                    <li>CSS3</li>
-                    <li>Git</li>
-                </ul>
-            </div>
-    </section>
-    <section class="code">
-        <h2>Code Exaples</h2>
-        <pre>
-            #include&lt;iostream&gt;
-            #include&lt;fstream&gt;
-            #include&lt;ctime&gt;
-            #include&lt;vector&gt;
-            #include&lt;algorithm&gt;
-            
-            using namespace std;
-            
-            void out(vector&lt;int&gt;& a) {
-                for (int i = 0; i &lt; a.size(); i++) {
-                    cout &lt;&lt; a[i] &lt;&lt; '\t';
-                }
-            }
-            int fillfile(ofstream& f) {
-                srand(time(NULL));
-                int c = rand() % 20;
-                for (int i = 0; i &lt; c; i++) {
-                    f &lt;&lt; rand() % 10 &lt;&lt; ' ';
-                }
-                return c;
-            }
-            void read(ifstream& g, vector&lt;int&gt;& a) {
-                for (int i = 0; i &lt; a.size(); i++) {
-                    g &gt;&gt; a[i];
-                }
-            }
-            void del(vector&lt;int&gt;& a) {
-                cout &lt;&lt; endl;
-                for (int i = 0; i &lt; a.size(); i++) {
-                    if (a.size() == i + 1) break;
-                    if (a[i] == a[i+1] ) {
-                        a.erase(a.begin()+i);
-                        i--;
-                    }
-                }	
-            }
-            int main() {
-                ofstream f;
-                f.open("chisla.txt");
-                vector&lt;int&gt; a(fillfile(f));
-                f.close();
-                ifstream g;
-                g.open("chisla.txt");
-                read(g, a);
-                g.close();
-                out(a);
-                cout &lt;&lt; "\n\n";
-                sort(a.begin(), a.end());
-                del(a);
-                out(a);
-            }
-        </pre>
-    </section>
-    <section class="projects">
-        <h2>My projects</h2>
-    </section>
-    <section>
-        <h2>Languages</h2>
-        <ul>
-            <li>Russian<i>(native)</i></li>
-            <li>Belarus<i>(native)</i></li>
-            <li>English<i>(A2+)</i></li>
-        </ul>
-    </section>
-    <section>
-        <h2 class="video">Video</h2>
-        <div class="video-container">
-
-        </div>
-    </section>
-</main>
-    <footer>
-        <div class="contacts">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
+        <div class="block">
+            <h2 class="title">Skills</h2>
+            <ul class="skills">
+                <li>C++</li>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Git</li>
+                <li>JavaScript</li>
             </ul>
         </div>
-    </footer>
+        <article class="block">
+            <h2 class="title">Example of code</h2>
+            <p>This program creates .txt file, fill it by random numbers from 0 to 20. <br>
+                Then sorts this numbers, delete repetitive numbers and write this numbers in a new file <br>
+                This program demonstrate knowledge of data strutere vector and how to work with files.
+            </p>
+            <pre>
+                    #include&lt;iostream&gt;
+                    #include&lt;fstream&gt;
+                    #include&lt;ctime&gt;
+                    #include&lt;vector&gt;
+                    #include&lt;algorithm&gt;
+                    
+                    using namespace std;
+                    
+                    void out(vector&lt;int&gt;& a) {
+                        for (int i = 0; i &lt; a.size(); i++) {
+                            cout &lt;&lt; a[i] &lt;&lt; '\t';
+                        }
+                    }
+                    int fillfile(ofstream& f) {
+                        srand(time(NULL));
+                        int c = rand() % 20;
+                        for (int i = 0; i &lt; c; i++) {
+                            f &lt;&lt; rand() % 10 &lt;&lt; ' ';
+                        }
+                        return c;
+                    }
+                    void read(ifstream& g, vector&lt;int&gt;& a) {
+                        for (int i = 0; i &lt; a.size(); i++) {
+                            g &gt;&gt; a[i];
+                        }
+                    }
+                    void del(vector&lt;int&gt;& a) {
+                        cout &lt;&lt; endl;
+                        for (int i = 0; i &lt; a.size(); i++) {
+                            if (a.size() == i + 1) break;
+                            if (a[i] == a[i+1] ) {
+                                a.erase(a.begin()+i);
+                                i--;
+                            }
+                        }	
+                    }
+                    int main() {
+                        ofstream f;
+                        f.open("chisla.txt");
+                        vector&lt;int&gt; a(fillfile(f));
+                        f.close();
+                        ifstream g;
+                        g.open("chisla.txt");
+                        read(g, a);
+                        g.close();
+                        out(a);
+                        cout &lt;&lt; "\n\n";
+                        sort(a.begin(), a.end());
+                        del(a);
+                        out(a);
+                    }
+                </pre>
+        </article>
+        <article class="block">
+            <h2 class="title">Languages</h2>
+            <ul class="lng">
+                <li>Russian (native)</li>
+                <li>Belarusian (native)</li>
+                <li>English (A2, Pre-Intermediate)</li>
+            </ul>
+        </article>
+        <article class="contacts">
+            <h2 class="title">Contacts</h2>
+            <ul class="Contacts">
+                <li><a href="https://vk.com/mikola_the_human">VK</a></li>
+                <li><a href="https://www.instagram.com/mikola_the_human/?hl=ru">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/nikolai-shulga-70a0b3217/">LinkedIn</a></li>
+                <li><a href="https://github.com/MikolaSh">Github</a></li>
+            </ul>
+        </article>
+        <footer>
+            <i>My github: <a href="https://github.com/MikolaSh" class="git">MikolaSh</a><br>
+            2021</i>
+            <a href="https://rs.school/js/"><img class="logo" src="https://rs.school/images/rs_school_js.svg" alt="rsschool logo" width="90"></a>
+        </footer>
+</main>
+</div>
 </body>
 </html>
