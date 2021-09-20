@@ -12,8 +12,9 @@
     display: flex;
 }
 .Contacts {
+  display: flex;
   list-style: none;
-  text-align: start;
+  text-align:justify;
 }
 .Contacts li{
     color: rgb(255, 255, 255);
@@ -94,6 +95,7 @@ p{
     
 }
 .skills{
+  display: flex;
     justify-content: space-around;
 }
 .skills li{
