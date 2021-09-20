@@ -25,7 +25,6 @@
                     <li><a href="#Languages" class="menu-item">Languages</a></li>
                     <li><a href="#Contacts" class="menu-item">Contacts</a></li>
                     <li><a href="#Video" class="menu-item">Video</a></li>
-
                 </ul>
 
             </div>
@@ -34,9 +33,11 @@
     <main class='main'>
         <header class="header">
         <h1>Micolaus Curriculum Vitae</h1>
-        <img src="/assets/images/Nikolai.jpg" alt="This is me" width="200" class="round">
+        <div class="head">
+        <img src="/assets/images/Nikolai.jpg" alt="This is me" width="250" class="round">
         <p><i>"End? No, the journey doesn't end here. Death is just another path, one that we all must take."</i><br><br>
             &mdash; J.R.R. Tolkien, The Lord of the Rings</p>
+        </div>
         </header>
         <article class="block" id="About myself">
            <h2 class="title">About myself</h2>
@@ -75,57 +76,57 @@
                 This program demonstrate knowledge of data strutere vector and how to work with files.
             </p>
             <pre><code>
-                    #include&lt;iostream&gt;
-                    #include&lt;fstream&gt;
-                    #include&lt;ctime&gt;
-                    #include&lt;vector&gt;
-                    #include&lt;algorithm&gt;
-                    
-                    using namespace std;
-                    
-                    void out(vector&lt;int&gt;& a) {
-                        for (int i = 0; i &lt; a.size(); i++) {
-                            cout &lt;&lt; a[i] &lt;&lt; '\t';
-                        }
-                    }
-                    int fillfile(ofstream& f) {
-                        srand(time(NULL));
-                        int c = rand() % 20;
-                        for (int i = 0; i &lt; c; i++) {
-                            f &lt;&lt; rand() % 10 &lt;&lt; ' ';
-                        }
-                        return c;
-                    }
-                    void read(ifstream& g, vector&lt;int&gt;& a) {
-                        for (int i = 0; i &lt; a.size(); i++) {
-                            g &gt;&gt; a[i];
-                        }
-                    }
-                    void del(vector&lt;int&gt;& a) {
-                        cout &lt;&lt; endl;
-                        for (int i = 0; i &lt; a.size(); i++) {
-                            if (a.size() == i + 1) break;
-                            if (a[i] == a[i+1] ) {
-                                a.erase(a.begin()+i);
-                                i--;
-                            }
-                        }	
-                    }
-                    int main() {
-                        ofstream f;
-                        f.open("chisla.txt");
-                        vector&lt;int&gt; a(fillfile(f));
-                        f.close();
-                        ifstream g;
-                        g.open("chisla.txt");
-                        read(g, a);
-                        g.close();
-                        out(a);
-                        cout &lt;&lt; "\n\n";
-                        sort(a.begin(), a.end());
-                        del(a);
-                        out(a);
-                    }
+    #include&lt;iostream&gt;
+    #include&lt;fstream&gt;
+    #include&lt;ctime&gt;
+    #include&lt;vector&gt;
+    #include&lt;algorithm&gt;
+                
+    using namespace std;
+               
+    void out(vector&lt;int&gt;& a) {
+        for (int i = 0; i &lt; a.size(); i++) {
+            cout &lt;&lt; a[i] &lt;&lt; '\t';
+        }
+    }
+    int fillfile(ofstream& f) {
+        srand(time(NULL));
+        int c = rand() % 20;
+        for (int i = 0; i &lt; c; i++) {
+            f &lt;&lt; rand() % 10 &lt;&lt; ' ';
+        }
+        return c;
+    }
+    void read(ifstream& g, vector&lt;int&gt;& a) {
+        for (int i = 0; i &lt; a.size(); i++) {
+            g &gt;&gt; a[i];
+        }
+    }
+    void del(vector&lt;int&gt;& a) {
+        cout &lt;&lt; endl;
+        for (int i = 0; i &lt; a.size(); i++) {
+            if (a.size() == i + 1) break;
+            if (a[i] == a[i+1] ) {
+                a.erase(a.begin()+i);
+                i--;
+            }
+        }	
+    }
+    int main() {
+        ofstream f;
+        f.open("chisla.txt");
+        vector&lt;int&gt; a(fillfile(f));
+        f.close();
+        ifstream g;
+        g.open("chisla.txt");
+        read(g, a);
+        g.close();
+        out(a);
+        cout &lt;&lt; "\n\n";
+        sort(a.begin(), a.end());
+        del(a);
+        out(a);
+    }
                 </code>
                 </pre>
         </article>
@@ -133,48 +134,59 @@
             <h2 class="title">My projects</h2>
             <div class="projects-container">
                 <div class="cards">
-                    <a href="https://www.google.com/maps/@48.8606882,2.3356791,3a,90y,328.36h,87.55t/data=!3m7!1e1!3m5!1sAF1QipMZ9YgnArbwEIbTDANeSQYFu9gNqpW_2Sv8FBvY!2e10!3e12!7i4352!8i1815" class="card transition">
-                        <img src="/assets/images/museum.PNG" alt="Royal Palace" width="200px">
-                        <p>Museum</p>
+                    <a href="https://rolling-scopes-school.github.io/mikolash-JSFEPRESCHOOL/museum/index.html" class="card transition" target="_blank">
+                        <img src="/assets/images/museum.PNG" alt="musem" width="600px">
+                        <h3>Museum</h3>
+                        
 
                     </a>
-                    <a href="https://www.google.com/maps/@48.8563254,2.3352706,3a,75y,90t/data=!3m7!1e1!3m5!1sAF1QipNRj_CwP4coDMYdCHj6qHeBeJpI2VxU5BUsOX4F!2e10!3e12!7i11000!8i5500" class="card transition">
-                        <img src="/assets/images/vertical-slider.PNG" alt="Demon wing" width="200px">
-                        <p>Vertical Slider</p>
+                    <p class="card-text">
+                        This is a project from stage 0. This is a project from stage 0 In the task it was necessary to lay out the layout of the Louvre website.<br> Technologies: HTML, CSS
+                    </p>
+                    <a href="https://rolling-scopes-school.github.io/mikolash-JSFEPRESCHOOL/custom-video-player/index.html" class="card transition" target="_blank">
+                        <img src="/assets/images/vertical-slider.PNG" alt="slider" width="600px">
+                        <h3>Vertical Slider</h3>
                        
                     </a>
-                    <a href="https://www.google.com/maps/@48.8601723,2.3395439,3a,88.4y,322.04h,84.25t/data=!3m7!1e1!3m5!1sAF1QipNMZGQuEA-pAUvIG_eP_2f3gWTKZEJ6XLVJ-Pgb!2e10!3e12!7i10240!8i5120" class="card transition">
-                        <img src="/assets/images/custom-video-player.PNG" alt="Colonade" width="200px">
-                        <p>Video player</p>
+                    <p class="card-text">
+                        In this project, it was necessary to create your own slider with additional functionality.<br>Technologies: HTML, CSS
+                   </p>
+                    <a href="https://rolling-scopes-school.github.io/mikolash-JSFEPRESCHOOL/vertical-slider/index.html" class="card transition" target="_blank">
+                        <img src="/assets/images/custom-video-player.PNG" alt="video" width="600px">
+                        <h3>Video player</h3>
+                        
                     </a>
-
+                    <p class="card-text">
+                        In this project I have implemented my custom video player with hotkeys. <br>Technologies: HTML, TsSS
+                    </p>
                 </div>
             </div>
         </section>
         <article class="block" id="Languages">
             <h2 class="title">Languages</h2>
             <ul class="lng">
-                <li>Russian (native)</li>
-                <li>Belarusian (native)</li>
-                <li>English (A2, Pre-Intermediate)</li>
+                <li>Russian <i>(native)</i></li>
+                <li>Belarusian <i>(native)</i></li>
+                <li>English <i>(A2+)</i></li>
             </ul>
         </article>
         <article class="contacts" id="Contacts">
             <h2 class="title">Contacts</h2>
             <ul class="Contacts">
-                <li><a href="https://vk.com/mikola_the_human">VK</a></li>
-                <li><a href="https://www.instagram.com/mikola_the_human/?hl=ru">Instagram</a></li>
-                <li><a href="https://www.linkedin.com/in/nikolai-shulga-70a0b3217/">LinkedIn</a></li>
-                <li><a href="https://github.com/MikolaSh">Github</a></li>
+                <li><a href="https://vk.com/mikola_the_human" target="_blank">VK</a></li>
+                <li><a href="https://www.instagram.com/mikola_the_human/?hl=ru" target="_blank">Instagram</a></li>
+                <li><a href="https://www.linkedin.com/in/nikolai-shulga-70a0b3217/" target="_blank">LinkedIn</a></li>
+                <li><a href="https://github.com/MikolaSh" target="_blank">Github</a></li>
             </ul>
         </article>
         <section class="video" id="Video">
+            <h2 class="title">Video</h2>
 
         </section>
         <footer>
-            <i>My github: <a href="https://github.com/MikolaSh" class="git">MikolaSh</a><br>
+            <h4><i>My github: <a href="https://github.com/MikolaSh" class="git" target="_blank">MikolaSh</a><br></h4>
             2021</i>
-            <a href="https://rs.school/js/"><img class="logo" src="https://rs.school/images/rs_school_js.svg" alt="rsschool logo" width="90"></a>
+            <a href="https://rs.school/js/"><img class="logo" src="https://rs.school/images/rs_school_js.svg" alt="rsschool logo" width="90" target="_blank"></a>
         </footer>
 </main>
 </div>

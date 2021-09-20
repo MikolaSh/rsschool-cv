@@ -4,8 +4,16 @@
     margin: 0;
     padding: 0;
   }
+
   html{
     scroll-behavior: smooth
+  }
+
+  .head{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .burger{
@@ -63,7 +71,7 @@
     padding: 80px 0;
 
     background-color: #ffffff;
-    box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+    /*box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);*/
   }
 
   .menu-item{
@@ -84,17 +92,21 @@
   }
 
   #menu:checked ~ .menu-button > span {
+    transition: 0.5s;
     transform: rotate(45deg);
   }
   #menu:checked ~ .menu-button > span::before {
+    transition: 0.5s;
     top: 0;
     transform: rotate(0);
   }
   #menu:checked ~ .menu-button > span::after {
+    transition: 0.5s;
     top: 0;
     transform: rotate(90deg);
   }
   #menu:checked ~ .menu-box{
+    transition: 0.5s;
     visibility: visible;
     left: 0;
   }
@@ -103,6 +115,7 @@
     /*display: flex;*/
 }
 .Contacts {
+  align-items: center;
   flex-wrap: wrap;
   display: flex;
   list-style: none;
@@ -187,7 +200,9 @@ border-radius: 1%;
     margin-right: 25%;
 }
 .round{
-    margin-left: 95px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
     border-radius: 300px;
     border: 10px solid #3e5a4a;
 }
@@ -221,6 +236,15 @@ h3:hover{
 
   color: #3e5a4a;
 }
+
+.card-text{
+  text-align: justify;
+    margin: 10px 30px;
+    font-size: 22px;
+    line-height: 30px;
+    font-family: 'PT Sans Caption', sans-serif;
+}
+
 p{
     text-align: justify;
     margin: 10px 30px;
@@ -256,9 +280,7 @@ p{
 pre {
     font-family: monospace;
     border-radius: 10px;
-
     font-size: 16px;
-
     display: block;
 }
 .lng li{
@@ -289,8 +311,4 @@ footer a:hover{
 .logo{
     display: block;
     float: right;
-}
-h4{
-    padding-left: 150px;
-    padding-top: 50px;
 }
