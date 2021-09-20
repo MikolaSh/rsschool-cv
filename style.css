@@ -121,14 +121,10 @@ p{
 }
 pre {
     font-family: monospace;
-    background: #272727;
     border-radius: 10px;
-    border-left: 6px solid #3e5a4a;
-    color: rgb(255, 255, 255);
-    page-break-inside: avoid;
+
     font-size: 16px;
-    line-height: 1.5;
-    max-width: 100%;
+
     display: block;
 }
 .lng li{
