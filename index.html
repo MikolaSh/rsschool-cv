@@ -1,16 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-      <link rel="stylesheet" href="/assets/highlights/styles/stackoverflow-dark.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/highlights/styles/stackoverflow-dark.min.css">
     <link href="style.css" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MikolaSh.CV</title>
-    <base target="_blank">
 </head>
 <body>
     <div class="section">
+        <nav>
+            <div class="burger">
+                <input type="checkbox" id="menu" />
+                <label class="menu-button" for="menu" >
+                    <span></span>
+                </label>
+                <ul class="menu-box">
+                    <li><a href="#About myself" class="menu-item">About myself</a></li>
+                    <li><a href="#Education" class="menu-item">Education</a></li>
+                    <li><a href="#Skills" class="menu-item">Skills</a></li>
+                    <li><a href="#Code" class="menu-item">Code Example</a></li>
+                    <li><a href="#Projects" class="menu-item">My projects</a></li>
+                    <li><a href="#Languages" class="menu-item">Languages</a></li>
+                    <li><a href="#Contacts" class="menu-item">Contacts</a></li>
+                    <li><a href="#Video" class="menu-item">Video</a></li>
+
+                </ul>
+
+            </div>
+        </nav>
         
     <main class='main'>
         <header class="header">
@@ -19,7 +38,7 @@
         <p><i>"End? No, the journey doesn't end here. Death is just another path, one that we all must take."</i><br><br>
             &mdash; J.R.R. Tolkien, The Lord of the Rings</p>
         </header>
-        <article class="block">
+        <article class="block" id="About myself">
            <h2 class="title">About myself</h2>
            <p>Hello, my name is Nikolai, I'm 20 years old, live in Minsk, Belarus and I'm studying front-end in RSschool! <br> 
             I'm student on Faculty of Radiophysics and Computer technologies BSU. This summer I have ended my first year. 
@@ -28,7 +47,7 @@
             I want to becom a JS developer to get a lot of money and go to the trip through the Europe on my own car.
             </p>
         </article>
-        <article class="block">
+        <article class="block" id="Education">
             <h2 class="title">Education</h2>
             <p>In 2018 I have graduated from high school №115 in Minsk. 
                 In this school I have studying music, but my school did not give a diploma of musical education
@@ -39,7 +58,7 @@
                 This summer I started front-end cours from RS-school.  
             </p>
         </article>
-        <div class="block">
+        <div class="block" id="Skills">
             <h2 class="title">Skills</h2>
             <ul class="skills">
                 <li>C++</li>
@@ -49,7 +68,7 @@
                 <li>JavaScript</li>
             </ul>
         </div>
-        <article class="block">
+        <article class="block" id="Code">
             <h2 class="title">Example of code</h2>
             <p>This program creates .txt file, fill it by random numbers from 0 to 20. <br>
                 Then sorts this numbers, delete repetitive numbers and write this numbers in a new file <br>
@@ -110,7 +129,7 @@
                 </code>
                 </pre>
         </article>
-        <section class="projects">
+        <section class="projects" id="Projects">
             <h2 class="title">My projects</h2>
             <div class="projects-container">
                 <div class="cards">
@@ -127,13 +146,12 @@
                     <a href="https://www.google.com/maps/@48.8601723,2.3395439,3a,88.4y,322.04h,84.25t/data=!3m7!1e1!3m5!1sAF1QipNMZGQuEA-pAUvIG_eP_2f3gWTKZEJ6XLVJ-Pgb!2e10!3e12!7i10240!8i5120" class="card transition">
                         <img src="/assets/images/custom-video-player.PNG" alt="Colonade" width="200px">
                         <p>Video player</p>
-                        
                     </a>
 
                 </div>
             </div>
         </section>
-        <article class="block">
+        <article class="block" id="Languages">
             <h2 class="title">Languages</h2>
             <ul class="lng">
                 <li>Russian (native)</li>
@@ -141,7 +159,7 @@
                 <li>English (A2, Pre-Intermediate)</li>
             </ul>
         </article>
-        <article class="contacts">
+        <article class="contacts" id="Contacts">
             <h2 class="title">Contacts</h2>
             <ul class="Contacts">
                 <li><a href="https://vk.com/mikola_the_human">VK</a></li>
@@ -150,6 +168,9 @@
                 <li><a href="https://github.com/MikolaSh">Github</a></li>
             </ul>
         </article>
+        <section class="video" id="Video">
+
+        </section>
         <footer>
             <i>My github: <a href="https://github.com/MikolaSh" class="git">MikolaSh</a><br>
             2021</i>
